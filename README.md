@@ -1,10 +1,10 @@
-# WEB103 Prework - *👉🏿 Name of App Here*
+# WEB103 Prework - *Creatorverse*
 
-Submitted by: **👉🏿 your name here**
+Submitted by: **Sharna Jahan Hossain**
 
 About this web app: **👉🏿 app description here**
 
-Time spent: **👉🏿 X** hours
+Time spent: **👉🏿 X** hours (started 6/6)
 
 ## Required Features
 
