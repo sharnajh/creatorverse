@@ -1,4 +1,4 @@
-import CreatorCard from "../components/CreatorCard/CreatorCard.jsx";
+import CreatorCard from "../../components/CreatorCard/CreatorCard.jsx";
 
 const ShowCreators = () => {
     const creator = {

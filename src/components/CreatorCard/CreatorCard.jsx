@@ -1,20 +1,26 @@
 import './CreatorCard.css';
 import PropTypes from 'prop-types';
 
-const CreatorCard = ({ creator: { name, url, description, imageURL } }) => {
+const CreatorCard = ({ creator }) => {
     return (
         <>
             <li className="card">
-                <h1>{name}</h1>
-                <h2>{url}</h2>
-                <p>{description}</p>
-                <img src={imageURL} alt={`Image of ${name}`} />
+                <h1>{creator.name}</h1>
+                <h2>{creator.url}</h2>
+                <p>{creator.description}</p>
+                <img src={creator.imageURL} alt={`Image of ${creator.name}`} />
             </li>
         </>
     )
 }
 CreatorCard.propTypes = {
-    creator: PropTypes.object
+    creator: PropTypes.shape({
+        name: PropTypes.string,
+        url: PropTypes.string,
+        description: PropTypes.string,
+        imageURL: PropTypes.string
+    })
+
 }
 
 export default CreatorCard;

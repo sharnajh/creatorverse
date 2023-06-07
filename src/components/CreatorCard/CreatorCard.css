@@ -1,3 +1,5 @@
 .card {
     border: 1px pink solid;
+    list-style: none;
+    width: 350px;
 }
