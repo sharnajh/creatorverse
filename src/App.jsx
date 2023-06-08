@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import '@picocss/pico';
-import { useRoutes } from 'react-router-dom';
 import { supabase } from './client.js';
-import AddCreator from './pages/CreatorManagement/AddCreator/AddCreator.jsx';
-import ShowCreators from './pages/CreatorManagement/ShowCreators';
+import Routes from './Routes.jsx';
 
 const App = () => {
   const [creators, setCreators] = useState();
@@ -18,19 +16,10 @@ const App = () => {
     }
     fetchCreators();
   }, []);
-  
-  const Routes = useRoutes([
-    {
-      path: '/',
-      element: <ShowCreators creators={creators} />
-    },
-    {
-      path: '/add',
-      element: <AddCreator />
-    }
-  ]);
 
-  return Routes;
+  return (
+    <Routes creators={creators} />
+  )
 }
 
 export default App;
