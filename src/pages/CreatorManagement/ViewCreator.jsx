@@ -1,6 +1,7 @@
-const ViewCreator = () => {
+const ViewCreator = ({ creator }) => {
     return (
         <>
+            {creator.name}
         </>
     )
 }

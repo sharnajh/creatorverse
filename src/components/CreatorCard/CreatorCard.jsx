@@ -14,10 +14,10 @@ const CreatorCard = ({ creator }) => {
 CreatorCard.propTypes = {
     creator: PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string,
-        url: PropTypes.string,
-        description: PropTypes.string,
-        imageURL: PropTypes.string
+        name: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        imageURL: PropTypes.string.isRequired
     })
 
 }

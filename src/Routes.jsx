@@ -6,7 +6,7 @@ const Routes = ({ creators }) => {
     const Routes = useRoutes([
         {
             path: '/',
-            element: <ShowCreators creators={creators} />
+            element: <ShowCreators creators={creators} />,
         },
         {
             path: '/add',
