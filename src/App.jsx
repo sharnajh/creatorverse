@@ -1,20 +1,29 @@
+import { useEffect, useState } from 'react';
 import '@picocss/pico';
 import { useRoutes } from 'react-router-dom';
-import CreateAccount from './pages/AccountManagement/CreateAccount/CreateAccount';
-import AddCreator from './pages/CreatorManagement/AddCreator';
+import { supabase } from './client.js';
+import AddCreator from './pages/CreatorManagement/AddCreator/AddCreator.jsx';
+import ShowCreators from './pages/CreatorManagement/ShowCreators';
 
 const App = () => {
+  const [creators, setCreators] = useState();
+
+  useEffect(() => {
+    const fetchCreators = async () => {
+      const { data, err } = await supabase
+        .from('creators')
+        .select();
+      err && console.error(err);
+      setCreators(data);
+    }
+    fetchCreators();
+  }, []);
+  
   const Routes = useRoutes([
     {
       path: '/',
-      element: <CreateAccount />
+      element: <ShowCreators creators={creators} />
     },
-    {
-      path: '/signup',
-      element: <CreateAccount />
-    },
-
-    // Creator CRUD
     {
       path: '/add',
       element: <AddCreator />

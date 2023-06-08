@@ -2,4 +2,6 @@
     border: 1px pink solid;
     list-style: none;
     width: 350px;
+    padding: 5px;
+    border-radius: 5px;
 }

@@ -1,19 +1,24 @@
 import CreatorCard from "../../components/CreatorCard/CreatorCard.jsx";
+import PropTypes from 'prop-types';
 
-const ShowCreators = () => {
-    const creator = {
-        name: "Kyoot Bot",
-        url: "https://www.twitch.tv/kyootbot",
-        description: "the baddest",
-        imageURL: "https://yt3.googleusercontent.com/KaTojTV5YUJm0YJoQwOlj3lgpGBeDL6spl8FNUiPfVGizV5ayiPrGrSAfmph9BXSJs5qaGBQuwA=s900-c-k-c0x00ffffff-no-rj"
-    }
+const ShowCreators = ({ creators }) => {
     return (
         <>
             <ul className="grid">
-                <CreatorCard creator={creator} />
+                {creators && <CreatorCard creator={creators[0]} />}
             </ul>
         </>
     )
+}
+ShowCreators.propTypes = {
+    creators: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        url: PropTypes.string,
+        description: PropTypes.string,
+        imageURL: PropTypes.string
+    })
+
 }
 
 export default ShowCreators;
