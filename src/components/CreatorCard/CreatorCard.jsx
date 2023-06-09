@@ -3,12 +3,32 @@ import './CreatorCard.css';
 
 const CreatorCard = ({ creator }) => {
     return (
-        <article className="card">
+        <>
+        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
             {/* <h1>{creator.name}</h1>
             <h2>{creator.url}</h2>
             <p>{creator.description}</p> */}
-            <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} />
+            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
         </article>
+        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
+            {/* <h1>{creator.name}</h1>
+            <h2>{creator.url}</h2>
+            <p>{creator.description}</p> */}
+            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
+        </article>
+        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
+            {/* <h1>{creator.name}</h1>
+            <h2>{creator.url}</h2>
+            <p>{creator.description}</p> */}
+            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
+        </article>
+        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
+            {/* <h1>{creator.name}</h1>
+            <h2>{creator.url}</h2>
+            <p>{creator.description}</p> */}
+            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
+        </article>
+        </>
     )
 }
 CreatorCard.propTypes = {

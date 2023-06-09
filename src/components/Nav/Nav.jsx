@@ -6,7 +6,7 @@ const Nav = () => {
         <nav>
             <ul>
                 <NavLink to="/">
-                    <li><strong>Creatorverse</strong></li>
+                    <li><h1>Creatorverse</h1></li>
                 </NavLink>
             </ul>
             <ul>
