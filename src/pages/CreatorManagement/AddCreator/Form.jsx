@@ -5,7 +5,7 @@ import SocialMediaLinks from "../../../components/FormInput/SocialMediaInputGrou
 
 const Form = () => {
     const [name, setName] = useState("");
-    const [imageURL, setImageURL] = useState("");
+    const [imageURL, setImageURL] = useState("http://");
     const [description, setDescription] = useState("");
     const [socialMediaLinks, setSocialMediaLinks] = useState({});
 

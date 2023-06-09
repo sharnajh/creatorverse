@@ -6,9 +6,9 @@ const SocialMediaInput = () => {
     const [inputEls, setInputEls] = useState([]);
 
     const addInput = () => {
-        setInputEls(prev =>
-            [...prev,
-            <LinkInput key={prev.length + 1} onClick={() => rmInput(prev.length + 1)} />])
+        const index = inputEls.length + 1;
+        setInputEls([...inputEls,
+            <LinkInput key={index} handleRm={() => rmInput(index)} />])
     }
 
     const rmInput = (key) => {
@@ -16,6 +16,7 @@ const SocialMediaInput = () => {
     }
     return (
         <>
+            <LinkInput key={0} />
             {inputEls}
             <button type="button" onClick={addInput}>+</button>
         </>
