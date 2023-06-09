@@ -22,15 +22,16 @@ const Form = () => {
 
             <TextInput name="Image URL"
                 value={imageURL} handleChange={setImageURL}
+                description="Provide a link to an image of your creator. Be sure to include the http://"
                 placeholder="http://" required />
 
-            <TextAreaInput name="Description" rows="4"
+            <TextAreaInput name="Description" rows="2"
                 value={description} handleChange={setDescription}
             />
 
             <SocialMediaInputGroup handleChange={setSocialMediaLinks} />
 
-            <button onClick={submitData} type="button">SUBMIT</button>
+            <button onClick={submitData} type="button" >SUBMIT</button>
         </form>
     )
 }
