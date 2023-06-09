@@ -9,9 +9,9 @@ const ShowCreators = ({ creators }) => {
     }
 
     return (
-        <ul className="grid">
+        <div className="grid">
             {creators ? displayCards() : "Loading..."}
-        </ul>
+        </div>
     )
 }
 ShowCreators.propTypes = {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TextInput from '../../../components/FormInput/TextInput';
 import TextAreaInput from "../../../components/FormInput/TextAreaInput";
-import SocialMediaLinks from "../../../components/FormInput/SocialMediaInputGroup";
+import SocialMediaInputGroup from "../../../components/FormInput/SocialMediaInputGroup";
 
 const Form = () => {
     const [name, setName] = useState("");
@@ -28,7 +28,7 @@ const Form = () => {
                 value={description} handleChange={setDescription}
             />
 
-            <SocialMediaLinks handleChange={setSocialMediaLinks} />
+            <SocialMediaInputGroup handleChange={setSocialMediaLinks} />
 
             <button onClick={submitData} type="button">SUBMIT</button>
         </form>

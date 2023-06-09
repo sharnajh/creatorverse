@@ -1,14 +1,14 @@
-import './CreatorCard.css';
 import PropTypes from 'prop-types';
+import './CreatorCard.css';
 
 const CreatorCard = ({ creator }) => {
     return (
-        <li className="card">
-            <h1>{creator.name}</h1>
+        <article className="card">
+            {/* <h1>{creator.name}</h1>
             <h2>{creator.url}</h2>
-            <p>{creator.description}</p>
-            <img src={creator.imageURL} alt={`Image of ${creator.name}`} />
-        </li>
+            <p>{creator.description}</p> */}
+            <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} />
+        </article>
     )
 }
 CreatorCard.propTypes = {
