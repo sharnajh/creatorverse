@@ -1,7 +1,8 @@
 import { useRoutes } from 'react-router-dom';
 import ShowCreators from './pages/CreatorManagement/ShowCreators';
 import ViewCreator from './pages/CreatorManagement/ViewCreator.jsx';
-import CreatorForm from './pages/CreatorManagement/CreatorForm';
+import AddCreator from './pages/CreatorManagement/AddCreator';
+import EditCreator from './pages/CreatorManagement/EditCreator';
 
 const Routes = ({ creators }) => {
     const Routes = useRoutes([
@@ -11,11 +12,11 @@ const Routes = ({ creators }) => {
         },
         {
             path: '/add',
-            element: <CreatorForm />
+            element: <AddCreator />
         },
         {
             path: 'edit/:creatorID',
-            element: <CreatorForm />
+            element: <EditCreator />
         },
         {
             path: 'view/:creatorID',

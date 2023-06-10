@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import InputDescription from './InputDescription';
 
-const TextInput = ({ handleChange, name, description = null, ...props }) => {
+const TextInput = ({ handleChange, label, keyName, description = null, ...props }) => {
     return (
         <label>
-            {name}
+            {label}
             <InputDescription description={description} />
             <input
                 type="text"
-                onChange={e => handleChange(e.target.value)}
+                onChange={e => handleChange(keyName, e.target.value)}
                 {...props}
             />
         </label>

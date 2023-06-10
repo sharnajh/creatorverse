@@ -1,0 +1,10 @@
+.error {
+    text-align: center;;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+}
+
+p {
+    font-size: 2em;
+}
