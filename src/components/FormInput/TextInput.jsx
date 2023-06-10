@@ -16,7 +16,8 @@ const TextInput = ({ handleChange, label, keyName, description = null, ...props 
 };
 TextInput.propTypes = {
     handleChange: PropTypes.func.isRequired,
-    name: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
+    keyName: PropTypes.string.isRequired
 }
 
 export default TextInput;

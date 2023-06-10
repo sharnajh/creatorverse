@@ -7,7 +7,7 @@ const DisplayImage = ({ imageURL }) => {
         el.src = "https://placehold.co/500?text=Invalid+Image+URL&font=roboto";
     }
     return (
-        <div className="photo-wrapper">
+        <div className="right">
             <img className="photo"
                 loading="lazy"
                 alt="Image of Creator"

@@ -17,7 +17,7 @@ const CreatorForm = ({ creator }) => {
     }
     return (
         <form className="container">
-            <div className="grid">
+            <div className="grid" style={{ gridTemplateColumns: "60% auto" }}>
                 <span>
                     <TextInput label="Name" keyName="name"
                         value={creatorFormData.name} handleChange={handleChange}

@@ -1,13 +1,16 @@
-.photo-wrapper {
+.right {
     display: grid;
     place-items: center;
-
 }
 
 .photo {
     width: 100%;
-    aspect-ratio: 1/1;
     object-fit: cover;
-    border: 0.7em solid;  
-    position: relative;
+    border: 0.7em solid; 
 }
+
+.photo:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
