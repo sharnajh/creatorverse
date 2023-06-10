@@ -1,7 +1,7 @@
 const EditCreator = () => {
     return (
-        <>
-        </>
+        <div className="container">
+        </div>
     )
 }
 

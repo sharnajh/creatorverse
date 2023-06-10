@@ -22,9 +22,7 @@ const App = () => {
   return (
     <>
       <Nav />
-      <main className="container">
-        <Routes creators={creators} />
-      </main>
+      <Routes creators={creators} />
     </>
   )
 }

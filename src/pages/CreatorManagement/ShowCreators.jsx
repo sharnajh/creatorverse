@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 const ShowCreators = ({ creators }) => {
     const displayCards = () => {
-        return creators.map(creator =>
+        return creators.map(creator => (
             <CreatorCard key={creator.id} creator={creator} />
-        )
+        ))
     }
 
     return (
-        <div className="grid">
+        <div className="container-fluid grid">
             {creators ? displayCards() : "Loading..."}
         </div>
     )

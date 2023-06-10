@@ -1,34 +1,17 @@
 import PropTypes from 'prop-types';
 import './CreatorCard.css';
+import { useNavigate } from 'react-router-dom';
 
 const CreatorCard = ({ creator }) => {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate("/view/" + creator.id);
+    }
     return (
-        <>
-        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
-            {/* <h1>{creator.name}</h1>
-            <h2>{creator.url}</h2>
-            <p>{creator.description}</p> */}
-            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
+        <article onClick={handleNavigate} className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
+            
         </article>
-        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
-            {/* <h1>{creator.name}</h1>
-            <h2>{creator.url}</h2>
-            <p>{creator.description}</p> */}
-            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
-        </article>
-        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
-            {/* <h1>{creator.name}</h1>
-            <h2>{creator.url}</h2>
-            <p>{creator.description}</p> */}
-            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
-        </article>
-        <article className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
-            {/* <h1>{creator.name}</h1>
-            <h2>{creator.url}</h2>
-            <p>{creator.description}</p> */}
-            {/* <img className="photo" src={creator.imageURL} alt={`Image of ${creator.name}`} /> */}
-        </article>
-        </>
     )
 }
 CreatorCard.propTypes = {
