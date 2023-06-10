@@ -5,7 +5,7 @@ const AddCreator = () => {
         name: "",
         imageURL: "",
         description: "",
-        socialMediaLinks: []
+        socialMediaLinks: {}
     }
     const addCreator = () => {}
     return <CreatorForm creator={emptyCreator} />

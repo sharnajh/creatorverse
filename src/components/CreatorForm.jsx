@@ -6,7 +6,7 @@ import DisplayImage from "./FormInput/DisplayImage/DisplayImage.jsx";
 
 // Page can edit existing creators and add new creators
 
-const CreatorForm = ({ creator }) => {
+const CreatorForm = ({ creator, handleSubmit }) => {
     const [creatorFormData, setCreatorFormData] = useState(creator);
 
     const handleChange = (key, val) => {
@@ -15,9 +15,10 @@ const CreatorForm = ({ creator }) => {
             [key]: val
         })
     }
+
     return (
         <form className="container">
-            <div className="grid" style={{ gridTemplateColumns: "60% auto" }}>
+            <div className="grid" >
                 <span>
                     <TextInput label="Name" keyName="name"
                         value={creatorFormData.name} handleChange={handleChange}
@@ -36,9 +37,9 @@ const CreatorForm = ({ creator }) => {
                 <DisplayImage imageURL={creatorFormData.imageURL} />
             </div>
 
-            <SocialMediaInputGroup />
+            <SocialMediaInputGroup handleChange={handleChange} />
 
-            <button type="button" >Submit</button>
+            <button type="button" onClick={handleSubmit} >Submit</button>
         </form>
     )
 };
