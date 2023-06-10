@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './DisplayImage.css';
 
 const DisplayImage = ({ imageURL }) => {
-    const defaultImage = "https://i.imgur.com/D3ESLqa.gif";
+    const defaultImage = "https://media3.giphy.com/media/Ai0FCXmNLpfhQNs0af/giphy.gif?cid=ecf05e47qus8nw6uumppnfgqmfrb7vr0agoe5jlbw3b66bav&ep=v1_gifs_search&rid=giphy.gif&ct=g";
 
     const manageImage = () => {
 

@@ -39,7 +39,7 @@ const CreatorForm = ({ creator }) => {
 
             <SocialMediaInputGroup />
 
-            <button type="button" >SUBMIT</button>
+            <button type="button" >Submit</button>
         </form>
     )
 };
