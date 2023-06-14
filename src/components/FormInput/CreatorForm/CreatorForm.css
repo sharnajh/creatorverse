@@ -1,0 +1,21 @@
+@media screen and (max-width: 990px) {
+    .left {
+        order: 2;
+    }
+
+    .right {
+        margin-bottom: 20px;
+        display: grid;
+        place-items: center;
+    }
+
+    .right > .photo {
+        border-radius: 100%;
+        width: 65%;
+    }
+}
+
+.right {
+    display: grid;
+    place-items: center;
+}

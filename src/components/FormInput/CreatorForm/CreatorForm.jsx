@@ -1,8 +1,9 @@
 import { useState } from "react";
-import TextInput from './FormInput/TextInput.jsx';
-import TextAreaInput from "./FormInput/TextAreaInput.jsx";
-import SocialMediaInputGroup from "./FormInput/SocialMediaInputGroup.jsx";
-import DisplayImage from "./FormInput/DisplayImage/DisplayImage.jsx";
+import './CreatorForm.css';
+import TextInput from '../TextInput.jsx';
+import TextAreaInput from "../TextAreaInput.jsx";
+import SocialMediaInputGroup from "../SocialMediaInputGroup.jsx";
+import DisplayImage from "../DisplayImage/DisplayImage.jsx";
 
 // Page can edit existing creators and add new creators
 
@@ -19,7 +20,7 @@ const CreatorForm = ({ creator, handleSubmit }) => {
     return (
         <form className="container">
             <div className="grid" >
-                <span>
+                <div className="left">
                     <TextInput label="Name" keyName="name"
                         value={creatorFormData.name} handleChange={handleChange}
                         required />
@@ -32,9 +33,11 @@ const CreatorForm = ({ creator, handleSubmit }) => {
                     <TextAreaInput label="Description" rows="2" keyName="description"
                         value={creatorFormData.description} handleChange={handleChange}
                     />
-                </span>
-
-                <DisplayImage imageURL={creatorFormData.imageURL} />
+                </div>
+                
+                <div className="right">
+                    <DisplayImage imageURL={creatorFormData.imageURL} />
+                </div>
             </div>
 
             <SocialMediaInputGroup handleChange={handleChange} />

@@ -1,4 +1,4 @@
-import CreatorForm from "../../components/CreatorForm"
+import CreatorForm from '../../components/FormInput/CreatorForm/CreatorForm.jsx';
 
 const AddCreator = () => {
     const emptyCreator = {

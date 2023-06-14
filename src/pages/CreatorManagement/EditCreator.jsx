@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../client.js';
-import CreatorForm from '../../components/CreatorForm';
+import CreatorForm from '../../components/FormInput/CreatorForm/CreatorForm.jsx';
 import NoCreators from "./ErrorViews/NoCreators.jsx";
 
 const EditCreator = () => {

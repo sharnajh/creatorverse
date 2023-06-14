@@ -7,13 +7,11 @@ const DisplayImage = ({ imageURL }) => {
         el.src = "https://placehold.co/500?text=Invalid+Image+URL&font=roboto";
     }
     return (
-        <div className="right">
             <img className="photo"
                 loading="lazy"
                 alt="Image of Creator"
                 onError={({ currentTarget }) => handleError(currentTarget)}
                 src={imageURL || defaultImage} />
-        </div>
     )
 }
 DisplayImage.propTypes = {
