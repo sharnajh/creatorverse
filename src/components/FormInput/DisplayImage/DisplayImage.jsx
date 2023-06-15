@@ -3,15 +3,15 @@ import './DisplayImage.css';
 
 const DisplayImage = ({ imageURL }) => {
     const defaultImage = "https://placehold.co/500?text=Image+Preview&font=roboto";
-    const handleError = (el) => {
-        el.src = "https://placehold.co/500?text=Invalid+Image+URL&font=roboto";
-    }
+    // const handleError = (el) => {
+    //     el.src = "https://placehold.co/500?text=Invalid+Image+URL&font=roboto";
+    // }
     return (
             <img className="photo"
                 loading="lazy"
                 alt="Image of Creator"
                 onError={({ currentTarget }) => handleError(currentTarget)}
-                src={imageURL || defaultImage} />
+                src={""} />
     )
 }
 DisplayImage.propTypes = {

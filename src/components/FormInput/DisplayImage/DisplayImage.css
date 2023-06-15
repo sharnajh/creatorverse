@@ -5,9 +5,3 @@
     border: 0.7em solid; 
     border-radius: 100%;
 }
-
-.photo:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
