@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import './CreatorForm.css';
 import TextInput from '../TextInput.jsx';
@@ -11,12 +12,20 @@ const CreatorForm = ({ creator, handleSubmit }) => {
     const [creatorFormData, setCreatorFormData] = useState(creator);
 
     const handleChange = (key, val) => {
+        console.log(creatorFormData)
         setCreatorFormData({
             ...creatorFormData,
             [key]: val
         })
     }
 
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Validate Form
+
+        handleSubmit();
+    }
     return (
         <form className="container">
             <div className="grid" >
@@ -30,11 +39,13 @@ const CreatorForm = ({ creator, handleSubmit }) => {
                         description="Provide a link to an image of your creator. Be sure to include the http://"
                         required />
 
-                    <TextAreaInput label="Description" rows="2" keyName="description"
+                    <TextAreaInput label="Description" keyName="description"
+                        rows="2"
                         value={creatorFormData.description} handleChange={handleChange}
+                        description={"Provide a description of the creator. Who are they? What makes them interesting?"}
                     />
                 </div>
-                
+
                 <div className="right">
                     <DisplayImage imageURL={creatorFormData.imageURL} />
                 </div>
@@ -42,9 +53,13 @@ const CreatorForm = ({ creator, handleSubmit }) => {
 
             <SocialMediaInputGroup handleChange={handleChange} />
 
-            <button type="button" onClick={handleSubmit} >Submit</button>
+            <button type="button" onClick={handleClick} >Submit</button>
         </form>
     )
 };
+CreatorForm.propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    creator: PropTypes.object.isRequired,
+}
 
 export default CreatorForm;

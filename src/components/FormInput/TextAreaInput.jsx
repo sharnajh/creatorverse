@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import InputDescription from './InputDescription';
 
-const TextAreaInput = ({ handleChange, label, keyName, ...props }) => {
+const TextAreaInput = ({ handleChange, label, keyName, description, error, ...props }) => {
     return (
         <label>
             {label}
-            <InputDescription description="Provide a description of the creator. Who are they? What makes them interesting?" />
+            <InputDescription error={error} description={description} />
             <textarea
                 onChange={e => handleChange(keyName, e.target.value)}
                 {...props}

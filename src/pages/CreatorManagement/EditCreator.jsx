@@ -9,12 +9,10 @@ const EditCreator = () => {
 
     const [data, setData] = useState();
 
-    const editCreator = () => {}
-
     useEffect(() => {
         if (creatorID) {
             const fetchCreatorByID = async () => {
-                const { data, err } = await supabase
+                const { data } = await supabase
                     .from('creators')
                     .select()
                     .eq('id', creatorID)

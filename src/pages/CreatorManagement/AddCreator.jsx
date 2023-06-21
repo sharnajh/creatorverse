@@ -5,9 +5,15 @@ const AddCreator = () => {
         name: "",
         imageURL: "",
         description: "",
-        socialMediaLinks: {}
+        socialMediaLinks: {
+            // Instagram: "",
+            // Tiktok: "",
+            // Twitch: "",
+            // Twitter: "",
+            // Youtube: ""
+        }
     }
-    const addCreator = () => {}
+    
     return <CreatorForm creator={emptyCreator} />
 }
 

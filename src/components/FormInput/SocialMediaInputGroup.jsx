@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import LinkInput from "./LinkInput";
 import InputDescription from "./InputDescription";
 
-const SocialMediaInputGroup = ({ handleChange }) => {
+const SocialMediaInputGroup = ({ handleChange, error }) => {
     const [smFormData, setSMFormData] = useState({
-        Twitch: "",
-        Tiktok: "",
-        Youtube: "",
         Instagram: "",
-        Twitter: ""
+        Tiktok: "",
+        Twitch: "",
+        Twitter: "",
+        Youtube: ""
     });
 
     const handleSMObj = (key, val) => {
@@ -26,7 +26,9 @@ const SocialMediaInputGroup = ({ handleChange }) => {
     return (
         <>
             <h3>SOCIAL MEDIA LINKS</h3>
-            <InputDescription description="Provide at least one of the creator&apos;s social media links" />
+            <InputDescription
+                description="Provide at least one of the creator&apos;s social media links"
+                error={error} />
             <br />
 
             {Object.keys(smFormData).map(sm => (
