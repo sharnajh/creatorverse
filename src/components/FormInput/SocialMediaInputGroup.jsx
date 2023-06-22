@@ -23,6 +23,7 @@ const SocialMediaInputGroup = ({ smData = BLANK_SM_DATA, handleChange, error }) 
 
     useEffect(() => {
         handleChange("socialMediaLinks", smFormData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [smFormData])
 
     return (
@@ -45,6 +46,8 @@ const SocialMediaInputGroup = ({ smData = BLANK_SM_DATA, handleChange, error }) 
 }
 SocialMediaInputGroup.propTypes = {
     handleChange: PropTypes.func.isRequired,
+    smData: PropTypes.object,
+    error: PropTypes.bool
 }
 
 export default SocialMediaInputGroup;

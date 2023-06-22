@@ -4,7 +4,7 @@ import './CreatorForm.css';
 import TextInput from '../InputFields/TextInput.jsx';
 import TextAreaInput from "../InputFields/TextAreaInput.jsx";
 import SocialMediaInputGroup from "../SocialMediaInputGroup.jsx";
-import DisplayImage from "../DisplayImage/DisplayImage.jsx";
+// import DisplayImage from "../DisplayImage/DisplayImage.jsx";
 
 // Page can edit existing creators and add new creators
 
@@ -79,7 +79,7 @@ const CreatorForm = ({ creator, handlePost }) => {
     )
 };
 CreatorForm.propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
+    handlePost: PropTypes.func.isRequired,
     creator: PropTypes.object.isRequired,
 }
 

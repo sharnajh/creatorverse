@@ -18,7 +18,9 @@ const TextInput = ({ handleChange, label, keyName, description = null, ...props 
 TextInput.propTypes = {
     handleChange: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired,
-    keyName: PropTypes.string.isRequired
+    keyName: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    "aria-invalid": PropTypes.bool.isRequired
 }
 
 export default TextInput;
