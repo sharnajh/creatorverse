@@ -12,6 +12,13 @@ const CreatorForm = ({ creator, handlePost }) => {
     const [creatorFormData, setCreatorFormData] = useState(creator);
     const [formErrors, setFormErrors] = useState({});
 
+    const handleChange = (key, val) => {
+        setCreatorFormData({
+            ...creatorFormData,
+            [key]: val
+        })
+    }
+
     const validateData = () => {
         const { name, description, socialMediaLinks } = creatorFormData;
         return {
@@ -21,13 +28,6 @@ const CreatorForm = ({ creator, handlePost }) => {
                 Object.values(socialMediaLinks)
                     .every(sm => sm === "")
         }
-    }
-
-    const handleChange = (key, val) => {
-        setCreatorFormData({
-            ...creatorFormData,
-            [key]: val
-        })
     }
 
     const handleSubmit = (e) => {

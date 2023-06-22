@@ -1,19 +1,21 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.svg"
 import './Nav.css';
 
 const Nav = () => {
     return (
-        <nav style={{ borderBottom: "1px solid" }}>
+        <nav>
             <ul>
                 <NavLink to="/">
-                    <li><h1>Creatorverse</h1></li>
+                    {/* <li className="logo"><img src={logo} /></li> */}
+                    <li><h3>Creatorverse</h3></li>
                 </NavLink>
             </ul>
             <ul>
-                <NavLink to="/">
+                <NavLink className="secondary" to="/">
                     <li>View All Creators</li>
                 </NavLink>
-                <NavLink to="/add">
+                <NavLink className="secondary" to="/add">
                     <li>Add a Creator</li>
                 </NavLink>
             </ul>

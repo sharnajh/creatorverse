@@ -1,9 +1,24 @@
 nav {
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    background-color: #0F181F;
+    border-bottom: thin solid #252E35;
+
+}
+
+.logo {
+    padding: 7px;
+    height: 66px;
+    width: 66px;
+    object-fit: contain;
+    background-color: #EDF0F3;
 }
 
 a {
     margin: 0;
     padding: 0;
+}
+
+h3 {
+    margin: 0;
 }
