@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import InputDescription from './InputDescription';
+import { useState } from 'react';
 
-const TextInput = ({ handleChange, label, keyName, error, description = null, ...props }) => {
+const TextInput = ({ handleChange, label, keyName, description = null, ...props }) => {
+    const [touched, setTouched] = useState(false);
     return (
         <label>
             {label}
-            <InputDescription error={error} description={description} />
+            <InputDescription description={description} error={props["aria-invalid"] && "Missing required input"} />
+            {touched && "TOUCHED!!!!"}
             <input
                 type="text"
                 onChange={e => handleChange(keyName, e.target.value)}

@@ -1,3 +1,5 @@
+import { BiErrorCircle } from 'react-icons/bi';
+
 const InputDescription = ({ description, error }) => {
     const tipStyle = {
         display: "block",
@@ -7,7 +9,7 @@ const InputDescription = ({ description, error }) => {
     return (
         <>
             <em style={tipStyle}>{description}</em>
-            <em style={{ color: "red" }}>{error}</em>
+            {error && <em style={{ ...tipStyle, color: "#de1d1d" }}><BiErrorCircle /> {error}</em>}
         </>
     )
 }

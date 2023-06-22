@@ -27,8 +27,9 @@ const SocialMediaInputGroup = ({ handleChange, error }) => {
         <>
             <h3>SOCIAL MEDIA LINKS</h3>
             <InputDescription
-                description="Provide at least one of the creator&apos;s social media links"
-                error={error} />
+                description="Provide at least one of the creator&apos;s social media handles"
+                error={error && "Missing at least one social media handle"}
+            />
             <br />
 
             {Object.keys(smFormData).map(sm => (

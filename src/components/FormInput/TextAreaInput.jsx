@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import InputDescription from './InputDescription';
 
-const TextAreaInput = ({ handleChange, label, keyName, description, error, ...props }) => {
+const TextAreaInput = ({ handleChange, label, keyName, description, ...props }) => {
     return (
         <label>
             {label}
-            <InputDescription error={error} description={description} />
+            <InputDescription description={description} error={props["aria-invalid"] && "Missing required input"} />
             <textarea
                 onChange={e => handleChange(keyName, e.target.value)}
+                style={{ resize: "none" }}
                 {...props}
             />
         </label>
