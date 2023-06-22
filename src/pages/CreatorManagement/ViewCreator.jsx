@@ -23,7 +23,7 @@ const ViewCreator = () => {
             <h1>User ID: {creatorID}</h1>
             {creator && <h1>Name: {creator.name}</h1>}
             <span className="grid">
-                <NavigateButton path={"edit/" + creatorID}>Edit</NavigateButton>
+                <NavigateButton path={"/edit/" + creatorID}>Edit</NavigateButton>
                 <button>Delete</button>
             </span>
         </div>

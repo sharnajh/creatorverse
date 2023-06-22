@@ -6,7 +6,7 @@ const AddCreator = () => {
         name: "",
         imageURL: "",
         description: "",
-        socialMediaLinks: {}
+        socialMediaLinks: undefined
     }
 
     const addCreator = async (newCreator) => {

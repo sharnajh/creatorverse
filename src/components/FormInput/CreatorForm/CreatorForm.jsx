@@ -13,7 +13,7 @@ const CreatorForm = ({ creator, handlePost }) => {
     const [formErrors, setFormErrors] = useState({});
 
     const validateData = () => {
-        const {name, description, socialMediaLinks} = creatorFormData;
+        const { name, description, socialMediaLinks } = creatorFormData;
         return {
             name: name === "",
             description: description === "",
@@ -69,7 +69,10 @@ const CreatorForm = ({ creator, handlePost }) => {
                 </div> */}
             </div>
 
-            <SocialMediaInputGroup error={formErrors.socialMediaLinks} handleChange={handleChange} />
+            <SocialMediaInputGroup
+                smData={creator.socialMediaLinks}
+                error={formErrors.socialMediaLinks}
+                handleChange={handleChange} />
 
             <button type="submit">Submit</button>
         </form>

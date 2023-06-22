@@ -3,14 +3,16 @@ import { useEffect, useState } from "react";
 import LinkInput from "./InputFields/LinkInput";
 import InputDescription from "./InputFields/InputDescription";
 
-const SocialMediaInputGroup = ({ handleChange, error }) => {
-    const [smFormData, setSMFormData] = useState({
-        Instagram: "",
-        Tiktok: "",
-        Twitch: "",
-        Twitter: "",
-        Youtube: ""
-    });
+const BLANK_SM_DATA = {
+    Instagram: "",
+    Tiktok: "",
+    Twitch: "",
+    Twitter: "",
+    Youtube: ""
+}
+
+const SocialMediaInputGroup = ({ smData = BLANK_SM_DATA, handleChange, error }) => {
+    const [smFormData, setSMFormData] = useState(smData);
 
     const handleSMObj = (key, val) => {
         setSMFormData({

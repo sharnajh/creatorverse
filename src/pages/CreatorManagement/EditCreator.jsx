@@ -7,7 +7,14 @@ import NoCreators from "./ErrorViews/NoCreators.jsx";
 const EditCreator = () => {
     const { creatorID } = useParams();
 
-    const [data, setData] = useState();
+    const [creator, setCreator] = useState();
+
+    const editCreator = async (creator) => {
+        const { error } = await supabase
+            .from('creators')
+            .update(creator)
+            .eq('id', creatorID)
+    }
 
     useEffect(() => {
         if (creatorID) {
@@ -16,13 +23,14 @@ const EditCreator = () => {
                     .from('creators')
                     .select()
                     .eq('id', creatorID)
-                setData(data);
+                setCreator(data[0]);
+                console.log(data);
             }
             fetchCreatorByID();
         }
     }, [])
-    if (data && !data.length) return <NoCreators errorDesc={"404: User does not exist 🤔"} />
-    return (<>{data && <CreatorForm creator={data[0]} />}</>)
+    if (!creator) return <NoCreators errorDesc={"404: User does not exist 🤔"} />
+    return (<CreatorForm creator={creator} handlePost={editCreator} />)
 }
 
 export default EditCreator;
