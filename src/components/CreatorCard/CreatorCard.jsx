@@ -10,7 +10,7 @@ const CreatorCard = ({ creator }) => {
     }
     return (
         <article onClick={handleNavigate} className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
-            
+
         </article>
     )
 }

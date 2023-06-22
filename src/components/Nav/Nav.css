@@ -1,9 +1,15 @@
 nav {
     padding: 0 10px;
     margin-bottom: 60px;
-    background-color: #0F181F;
+    /* background-color: #0F181F; */
     border-bottom: thin solid #252E35;
-
+    backdrop-filter:  blur(20px);
+    -webkit-backdrop-filter:  blur(20px);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .logo {

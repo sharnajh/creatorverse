@@ -19,7 +19,7 @@ const ViewCreator = () => {
         fetchCreatorByID();
     }, [setCreator, creatorID])
     return (
-        <div className="container">
+        <div className="container" id="main">
             <h1>User ID: {creatorID}</h1>
             {creator && <h1>Name: {creator.name}</h1>}
             <span className="grid">

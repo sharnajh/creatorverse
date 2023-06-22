@@ -44,7 +44,7 @@ const CreatorForm = ({ creator, handlePost }) => {
         }
     }
     return (
-        <form className="container" onSubmit={handleSubmit}>
+        <form className="container" id="main" onSubmit={handleSubmit}>
             <div className="grid" >
                 <div className="left">
                     <TextInput label="Name" keyName="name"

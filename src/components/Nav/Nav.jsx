@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.svg"
+//import logo from "../../assets/logo.svg"
 import './Nav.css';
 
 const Nav = () => {
     return (
-        <nav>
+        <nav className="container-fluid">
             <ul>
                 <NavLink to="/">
                     {/* <li className="logo"><img src={logo} /></li> */}
