@@ -4,7 +4,7 @@ import './DisplayImage.css';
 const DisplayImage = ({ imageURL }) => {
     return (
         <div className="circle-frame">
-            {imageURL ? <img src={imageURL} /> : <h2>Image Preview</h2>}
+            <img src={imageURL} />
         </div>
     )
 }

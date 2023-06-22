@@ -8,14 +8,14 @@ import Nav from './components/Nav/Nav.jsx';
 const App = () => {
   const [creators, setCreators] = useState();
 
+  const fetchCreators = async () => {
+    const { data } = await supabase
+      .from('creators')
+      .select();
+    setCreators(data);
+  }
+
   useEffect(() => {
-    const fetchCreators = async () => {
-      const { data, err } = await supabase
-        .from('creators')
-        .select();
-      err && console.error(err);
-      setCreators(data);
-    }
     fetchCreators();
   }, []);
 

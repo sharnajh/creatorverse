@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
-import LinkInput from "./LinkInput";
-import InputDescription from "./InputDescription";
+import LinkInput from "./InputFields/LinkInput";
+import InputDescription from "./InputFields/InputDescription";
 
 const SocialMediaInputGroup = ({ handleChange, error }) => {
     const [smFormData, setSMFormData] = useState({

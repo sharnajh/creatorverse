@@ -5,7 +5,8 @@ const TextAreaInput = ({ handleChange, label, keyName, description, ...props }) 
     return (
         <label>
             {label}
-            <InputDescription description={description} error={props["aria-invalid"] && "Missing required input"} />
+            <InputDescription description={description}
+                error={props["aria-invalid"] && "Missing required input"} />
             <textarea
                 onChange={e => handleChange(keyName, e.target.value)}
                 style={{ resize: "none" }}
@@ -17,7 +18,8 @@ const TextAreaInput = ({ handleChange, label, keyName, description, ...props }) 
 TextAreaInput.propTypes = {
     handleChange: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired,
-    keyName: PropTypes.string.isRequired
+    keyName: PropTypes.string.isRequired,
+    "aria-invalid": PropTypes.bool
 }
 
 export default TextAreaInput;

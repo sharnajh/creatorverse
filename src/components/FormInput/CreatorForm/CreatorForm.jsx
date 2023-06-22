@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import './CreatorForm.css';
-import TextInput from '../TextInput.jsx';
-import TextAreaInput from "../TextAreaInput.jsx";
+import TextInput from '../InputFields/TextInput.jsx';
+import TextAreaInput from "../InputFields/TextAreaInput.jsx";
 import SocialMediaInputGroup from "../SocialMediaInputGroup.jsx";
 import DisplayImage from "../DisplayImage/DisplayImage.jsx";
 
@@ -13,11 +13,13 @@ const CreatorForm = ({ creator, handlePost }) => {
     const [formErrors, setFormErrors] = useState({});
 
     const validateData = () => {
+        const {name, description, socialMediaLinks} = creatorFormData;
         return {
-            name: creatorFormData.name === "",
-            description: creatorFormData.description === "",
-            socialMedia:
-                Object.values(creatorFormData.socialMediaLinks).every(sm => sm === "")
+            name: name === "",
+            description: description === "",
+            socialMediaLinks:
+                Object.values(socialMediaLinks)
+                    .every(sm => sm === "")
         }
     }
 
@@ -36,8 +38,9 @@ const CreatorForm = ({ creator, handlePost }) => {
         const errors = validateData();
         setFormErrors(errors);
 
+        // Send data
         if (Object.values(errors).every((f) => f === false)) {
-            // handlePost(creatorFormData);
+            handlePost(creatorFormData);
         }
     }
     return (
@@ -61,12 +64,12 @@ const CreatorForm = ({ creator, handlePost }) => {
                     />
                 </div>
 
-                <div className="right">
+                {/* <div className="right">
                     <DisplayImage imageURL={creatorFormData.imageURL} />
-                </div>
+                </div> */}
             </div>
 
-            <SocialMediaInputGroup error={formErrors.socialMedia} handleChange={handleChange} />
+            <SocialMediaInputGroup error={formErrors.socialMediaLinks} handleChange={handleChange} />
 
             <button type="submit">Submit</button>
         </form>
