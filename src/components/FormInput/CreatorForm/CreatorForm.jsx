@@ -11,6 +11,7 @@ import SocialMediaInputGroup from "../SocialMediaInputGroup.jsx";
 const CreatorForm = ({ creator, handlePost }) => {
     const [creatorFormData, setCreatorFormData] = useState(creator);
     const [formErrors, setFormErrors] = useState({});
+    const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const handleChange = (key, val) => {
         setCreatorFormData({
@@ -31,6 +32,8 @@ const CreatorForm = ({ creator, handlePost }) => {
     }
 
     const handleSubmit = (e) => {
+        setButtonDisabled(true);
+
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -42,6 +45,8 @@ const CreatorForm = ({ creator, handlePost }) => {
         if (Object.values(errors).every((f) => f === false)) {
             handlePost(creatorFormData);
         }
+
+        setButtonDisabled(false);
     }
     return (
         <form className="container" id="main" onSubmit={handleSubmit}>
@@ -74,7 +79,7 @@ const CreatorForm = ({ creator, handlePost }) => {
                 error={formErrors.socialMediaLinks}
                 handleChange={handleChange} />
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={buttonDisabled}>Submit</button>
         </form>
     )
 };
