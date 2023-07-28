@@ -1,6 +1,7 @@
 import CreatorCard from "../../components/CreatorCard/CreatorCard.jsx";
 import PropTypes from 'prop-types';
 import NoCreators from "./ErrorViews/NoCreators.jsx";
+import './ShowCreators.css';
 
 const ShowCreators = ({ creators }) => {
     const displayCards = () => {
@@ -10,14 +11,12 @@ const ShowCreators = ({ creators }) => {
     }
 
     const style = {
-        margin: 0,
-        padding: 0,
-        marginTop: "88.5px"
+        marginTop: -40,
     }
 
     if (!creators || !creators.length) return <NoCreators errorDesc="There are no creators yet! 😭" />
     return (
-        <div className="container-fluid grid" id="main" style={ style }>
+        <div className="container-fluid bunga" style={ style }>
             {displayCards()}
         </div>
     )

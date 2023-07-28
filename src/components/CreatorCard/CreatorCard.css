@@ -1,11 +1,10 @@
 .card {
     background-size: cover;
     object-fit: cover;
-    height: 300px;
+
     cursor: pointer;
-    max-width: 300px;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     border-radius: 0;
 }
 

@@ -1,10 +1,12 @@
+import { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 //import logo from "../../assets/logo.svg"
 import './Nav.css';
 
-const Nav = () => {
+// eslint-disable-next-line react/display-name
+const Nav = forwardRef((props, ref) => {
     return (
-        <nav className="container-fluid">
+        <nav ref={ref} className="container-fluid">
             <ul>
                 <NavLink to="/">
                     {/* <li className="logo"><img src={logo} /></li> */}
@@ -21,6 +23,6 @@ const Nav = () => {
             </ul>
         </nav>
     )
-}
+})
 
 export default Nav;

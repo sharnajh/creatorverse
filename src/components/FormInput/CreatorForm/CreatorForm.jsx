@@ -4,11 +4,14 @@ import './CreatorForm.css';
 import TextInput from '../InputFields/TextInput.jsx';
 import TextAreaInput from "../InputFields/TextAreaInput.jsx";
 import SocialMediaInputGroup from "../SocialMediaInputGroup.jsx";
+import { useNavigate } from 'react-router';
 // import DisplayImage from "../DisplayImage/DisplayImage.jsx";
 
 // Page can edit existing creators and add new creators
 
 const CreatorForm = ({ creator, handlePost }) => {
+    const navigate = useNavigate();
+
     const [creatorFormData, setCreatorFormData] = useState(creator);
     const [formErrors, setFormErrors] = useState({});
     const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -47,6 +50,8 @@ const CreatorForm = ({ creator, handlePost }) => {
         }
 
         setButtonDisabled(false);
+
+        navigate("/view/" + creatorFormData.id)
     }
     return (
         <form className="container" id="main" onSubmit={handleSubmit}>
@@ -79,7 +84,7 @@ const CreatorForm = ({ creator, handlePost }) => {
                 error={formErrors.socialMediaLinks}
                 handleChange={handleChange} />
 
-            <button type="submit" disabled={buttonDisabled}>Submit</button>
+            <button type="submit" disabled={buttonDisabled} aria-busy={buttonDisabled}>Submit</button>
         </form>
     )
 };

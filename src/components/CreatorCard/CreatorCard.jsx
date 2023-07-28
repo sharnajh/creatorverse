@@ -9,7 +9,10 @@ const CreatorCard = ({ creator }) => {
         navigate("/view/" + creator.id);
     }
     return (
-        <article onClick={handleNavigate} className="card" style={{backgroundImage: `url("${creator.imageURL}")` }}>
+        <article
+            onClick={handleNavigate}
+            className="card"
+            style={{ backgroundImage: `url("${creator.imageURL}")` }}>
 
         </article>
     )

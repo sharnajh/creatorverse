@@ -1,11 +1,11 @@
 import './error.css';
 import NavigateButton from "../../../components/NavigateButton";
 
-const NoCreators = ({ errorDesc }) => {
+const NoCreators = () => {
     return (
         <div className="container-fluid error">
             <span>
-                <p>{errorDesc}</p>
+                <h1>Creator does not exist 🤔</h1>
                 <NavigateButton path="/add">Add a creator</NavigateButton>
             </span>
         </div>
