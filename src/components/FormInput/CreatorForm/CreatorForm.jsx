@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router';
 // Page can edit existing creators and add new creators
 
 const CreatorForm = ({ creator, handlePost }) => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     const [creatorFormData, setCreatorFormData] = useState(creator);
     const [formErrors, setFormErrors] = useState({});
