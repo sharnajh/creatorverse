@@ -5,6 +5,8 @@ import CreatorForm from '../../components/FormInput/CreatorForm/CreatorForm.jsx'
 import NoCreators from "./ErrorViews/NoCreators.jsx";
 import FetchingData from "./ErrorViews/FetchingData.jsx";
 
+// TODO: ContextAPI to update data fetched in App.js when edits happen
+
 const EditCreator = () => {
     const { creatorID } = useParams();
 

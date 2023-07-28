@@ -47,11 +47,11 @@ const CreatorForm = ({ creator, handlePost }) => {
         // Send data
         if (Object.values(errors).every((f) => f === false)) {
             handlePost(creatorFormData);
+            // navigate("/view/" + creatorFormData.id)
         }
 
         setButtonDisabled(false);
 
-        navigate("/view/" + creatorFormData.id)
     }
     return (
         <form className="container" id="main" onSubmit={handleSubmit}>
