@@ -11,33 +11,33 @@ Time spent: **~30 hours (started 6/6)**
 The following **required** functionality is completed:
 
 <!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
-- ✅ **A logical component structure in React is used to create the frontend of the app**
-- ✅ **At least five content creators are displayed on the homepage of the app**
-- ✅ **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
-- ✅ **API calls use the async/await design pattern via Axios or fetch()**
-- ✅ **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
-- ✅ **Each content creator has their own unique URL**
-- ✅ **The user can edit a content creator to change their name, url, or description**
-- ✅ **The user can delete a content creator**
-- ✅ **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
+- [x] **A logical component structure in React is used to create the frontend of the app**
+- [x] **At least five content creators are displayed on the homepage of the app**
+- [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
+- [x] **API calls use the async/await design pattern via Axios or fetch()**
+- [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
+- [x] **Each content creator has their own unique URL**
+- [x] **The user can edit a content creator to change their name, url, or description**
+- [x] **The user can delete a content creator**
+- [x] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
 The following **optional** features are implemented:
 
-- ✅ Picocss is used to style HTML elements
-- ✅ The content creator items are displayed in a creative format, like cards instead of a list
-- ✅ An image of each content creator is shown on their content creator card
+- [x] Picocss is used to style HTML elements
+- [x] The content creator items are displayed in a creative format, like cards instead of a list
+- [x] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
 
-* ✅ **Dynamic Light and Dark Themes** utilizing Pico.css variables, managed with React's state management.
+* [x] **Dynamic Light and Dark Themes** utilizing Pico.css variables, managed with React's state management.
 ![Gif of dynamic theme toggle](src/assets/gifs/themes.gif)
-* ✅ **Robust form validation with intuitive UI feedback** to ensure that only valid data is submitted to the database, promoting data integrity and user experience. The form checks whether the user has submitted the required information (name, description, and at least one social media link), provides feedback with error syntax and highlighting, and won't allow submission until valid inputs are entered.
-* ✅ **Responsive Web Design.** My project features a fixed Navbar positioned at the top. To achieve this layout, I utilized React's useRef() hook to dynamically calculate the Navbar's height, which varies based on Pico.css's responsiveness. This calculation allowed me to offset the body content, ensuring it appears directly beneath the Navbar, providing a visually harmonious and user-friendly browsing experience.
-* ✅ **Refresh creators every render of homepage to fetch most recent changes.** The first fetch to View All Content Creators occurs in App.js, which renders only once per refresh. However, to achieve real-time data updates, I positioned a component slightly further down the component tree to handle data refreshes, enabling the continuous fetching of new data and seamless display of up-to-date content to the users.
-* ✅ **Implemented React's ContextAPI to effectively manage the data fetched from Supabase.** Using ContextAPI, I established a streamlined flow of data throughout the component tree structure, promoting a cleaner and more organized data management approach. This not only facilitates better data accessibility but also mitigates redundant API calls, preventing unnecessary rerenders.
-* ✅ **Loading pages during API calls.** Users are presented with visual feedback, a loading spinner, while waiting for data to be fetched from the API. Additionally, I integrated error pages to gracefully handle scenarios where API requests fail or no data is available. For example, when the user tries to visit the url "/view/x" where *x* is the ID of a creator that does not exist.
-* ✅ **Modal to confirm the deletion of a creator.** When a user initiates the deletion action, the Modal dialog appears, prompting them to confirm their decision. 
-* ✅ **[React Icons Library](https://react-icons.github.io/react-icons/) for icon assets.** I leveraged the library to incorporate a wide range of visually appealing and scalable icons. 
+* [x] **Robust form validation with intuitive UI feedback** to ensure that only valid data is submitted to the database, promoting data integrity and user experience. The form checks whether the user has submitted the required information (name, description, and at least one social media link), provides feedback with error syntax and highlighting, and won't allow submission until valid inputs are entered.
+* [x] **Responsive Web Design.** My project features a fixed Navbar positioned at the top. To achieve this layout, I utilized React's useRef() hook to dynamically calculate the Navbar's height, which varies based on Pico.css's responsiveness. This calculation allowed me to offset the body content, ensuring it appears directly beneath the Navbar, providing a visually harmonious and user-friendly browsing experience.
+* [x] **Refresh creators every render of homepage to fetch most recent changes.** The first fetch to View All Content Creators occurs in App.js, which renders only once per refresh. However, to achieve real-time data updates, I positioned a component slightly further down the component tree to handle data refreshes, enabling the continuous fetching of new data and seamless display of up-to-date content to the users.
+* [x] **Implemented React's ContextAPI to effectively manage the data fetched from Supabase.** Using ContextAPI, I established a streamlined flow of data throughout the component tree structure, promoting a cleaner and more organized data management approach. This not only facilitates better data accessibility but also mitigates redundant API calls, preventing unnecessary rerenders.
+* [x] **Loading pages during API calls.** Users are presented with visual feedback, a loading spinner, while waiting for data to be fetched from the API. Additionally, I integrated error pages to gracefully handle scenarios where API requests fail or no data is available. For example, when the user tries to visit the url "/view/x" where *x* is the ID of a creator that does not exist.
+* [x] **Modal to confirm the deletion of a creator.** When a user initiates the deletion action, the Modal dialog appears, prompting them to confirm their decision. 
+* [x] **[React Icons Library](https://react-icons.github.io/react-icons/) for icon assets.** I leveraged the library to incorporate a wide range of visually appealing and scalable icons. 
 * [ ] **Deployed to Vercel**
 
 ## Video Walkthrough
