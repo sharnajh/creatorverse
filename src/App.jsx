@@ -33,10 +33,14 @@ const App = () => {
   }, []);
 
   useLayoutEffect(() => {
-    if (NavRef.current) {
-      const { height } = NavRef.current.getBoundingClientRect();
-      setNavHeight(height);
+    const handleNavSize = () => {
+      if (NavRef.current) {
+        const { height } = NavRef.current.getBoundingClientRect();
+        setNavHeight(height);
+      }
     }
+    handleNavSize();
+    window.addEventListener("resize", handleNavSize);
   }, []);
 
   return (

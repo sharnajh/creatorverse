@@ -29,9 +29,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* ✅ Light and Dark Themes
+* ✅ Light and Dark Themes utilizing Pico.css variables, managed with React state.
 * ✅ Form validation with UI feedback to ensure that only valid data is submitted to the database
-* ✅ Responsive Web Design. Utilizing Pico.css with additional JavaScript to calculate dimensions for clean responsivity 
+* ✅ Responsive Web Design. Because I opted for a fixed Navbar at the top, I used React hook useRef() to calculate the height of the Navbar (which varies due to it's responsivity from Pico.css) in order to offset the rest of the body to be visible directly beneath the Nav. 
+* ✅ Refresh creators every render of homepage to fetch most recent changes. According to the instructions, the initial fetch to View All Content Creators should happen in App.js, which only renders once per refresh. In order to fetch new data in real-time, I have a component slightly further down the component tree refresh the data. 
+* ✅ Used React's ContextAPI to manage the data fetched from Supabase and make it available across the app. This helps foster a cleaner flow of data throughout the component tree structure, and avoids unnecessary rerenders from redundant API calls. 
 
 ## Video Walkthrough
 
