@@ -4,11 +4,11 @@ import ViewCreator from './pages/CreatorManagement/ViewCreator.jsx';
 import AddCreator from './pages/CreatorManagement/AddCreator';
 import EditCreator from './pages/CreatorManagement/EditCreator';
 
-const Routes = ({ creators }) => {
+const Routes = () => {
     const Routes = useRoutes([
         {
             path: '/',
-            element: <ShowCreators creators={creators} />,
+            element: <ShowCreators />,
         },
         {
             path: '/add',

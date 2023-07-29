@@ -1,10 +1,14 @@
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect, createContext } from 'react';
 import '@picocss/pico';
 import './App.css';
 import { supabase } from './client.js';
 import Routes from './Routes.jsx';
 import Nav from './components/Nav/Nav.jsx';
-import FetchingData from './pages/CreatorManagement/ErrorViews/FetchingData';
+import FetchingData from './pages/ErrorViews/FetchingData';
+
+// Context API to store + manage data retrieved from Supabase across the app
+export const CreatorsContext = createContext([]);
+export const CreatorsContextRefresh = createContext();
 
 const App = () => {
   const NavRef = useRef();
@@ -36,14 +40,20 @@ const App = () => {
     <>
       <Nav ref={NavRef} />
 
-      {loading
-        ? <FetchingData />
-        : (
+      {loading ? <FetchingData /> :
+        (
           <div id="main" style={{ marginTop: navHeight + 40 }}>
-            <Routes creators={creators} />
-          </div>
-        )}
+            <CreatorsContext.Provider value={creators}>
+              <CreatorsContextRefresh.Provider value={fetchCreators}>
 
+                {/* <Routes creators={creators} /> */}
+                <Routes />
+
+              </CreatorsContextRefresh.Provider>
+            </CreatorsContext.Provider>
+          </div >
+        )
+      }
     </>
   )
 }

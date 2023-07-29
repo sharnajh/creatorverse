@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../client.js';
 import CreatorForm from '../../components/FormInput/CreatorForm/CreatorForm.jsx';
-import NoCreators from "./ErrorViews/NoCreators.jsx";
-import FetchingData from "./ErrorViews/FetchingData.jsx";
-
-// TODO: ContextAPI to update data fetched in App.js when edits happen
+import NoCreators from "../ErrorViews/NoCreators.jsx";
+import FetchingData from "../ErrorViews/FetchingData.jsx";
 
 const EditCreator = () => {
     const { creatorID } = useParams();

@@ -1,5 +1,5 @@
 import './error.css';
-import NavigateButton from "../../../components/NavigateButton";
+import NavigateButton from "../../components/NavigateButton";
 
 const NoCreators = () => {
     return (

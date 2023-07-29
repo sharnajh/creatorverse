@@ -1,3 +1,5 @@
+import './error.css';
+
 const FetchingData = () => {
     return (
         <div className="container-fluid error">
