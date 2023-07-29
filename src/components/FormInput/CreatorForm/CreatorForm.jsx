@@ -38,7 +38,6 @@ const CreatorForm = ({ creator, handlePost }) => {
         setButtonDisabled(true);
 
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
 
         // Validate Form
         const errors = validateData();
@@ -51,6 +50,8 @@ const CreatorForm = ({ creator, handlePost }) => {
                 navigate("/view/" + creator[0].id)
             });
         }
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setButtonDisabled(false);
     }
     return (
