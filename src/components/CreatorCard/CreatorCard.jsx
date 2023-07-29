@@ -15,14 +15,16 @@ const CreatorCard = ({ creator }) => {
             className="card">
             <div className='overlay'>
                 <h3>{creator.name}</h3>
+                
                 <p>{creator.description}</p>
                 <div className="socmeds">
                     <SocialMediaLinks socmeds={creator.socialMediaLinks} />
                 </div>
             </div>
 
-
-            <img className="photo" src={creator.imageURL} />
+            <img className="photo"
+                alt={`Photo of ${creator.name}`}
+                src={creator.imageURL} />
         </article>
     )
 }

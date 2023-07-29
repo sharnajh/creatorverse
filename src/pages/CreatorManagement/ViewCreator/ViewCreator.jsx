@@ -42,7 +42,7 @@ const ViewCreator = () => {
                     </div>
 
                     <div className="img">
-                        <img src={creator.imageURL} />
+                        <img src={creator.imageURL} alt={`Photo of ${creator.name}`} />
                     </div>
 
                     <div className="desc">

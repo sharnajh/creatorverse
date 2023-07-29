@@ -5,6 +5,7 @@ import { supabase } from './client.js';
 import Routes from './Routes.jsx';
 import Nav from './components/Nav/Nav.jsx';
 import FetchingData from './pages/ErrorViews/FetchingData';
+import Footer from './components/Footer/Footer';
 
 // Context API to store + manage data retrieved from Supabase across the app
 export const CreatorsContext = createContext([]);
@@ -37,21 +38,25 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <Nav ref={NavRef} />
+    <main>
+      <span>
+        <Nav ref={NavRef} />
 
-      {loading ? <FetchingData /> :
-        (
-          <div id="main" style={{ marginTop: navHeight + 40 }}>
-            <CreatorsContext.Provider value={creators}>
-              <CreatorsContextRefresh.Provider value={fetchCreators}>
-                <Routes />
-              </CreatorsContextRefresh.Provider>
-            </CreatorsContext.Provider>
-          </div >
-        )
-      }
-    </>
+        {loading ? <FetchingData /> :
+          (
+            <div id="main" style={{ marginTop: navHeight + 40 }}>
+              <CreatorsContext.Provider value={creators}>
+                <CreatorsContextRefresh.Provider value={fetchCreators}>
+                  <Routes />
+                </CreatorsContextRefresh.Provider>
+              </CreatorsContext.Provider>
+            </div >
+          )
+        }
+      </span>
+
+      <Footer />
+    </main>
   )
 }
 
