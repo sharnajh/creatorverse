@@ -4,7 +4,7 @@ Submitted by: **Sharna Jahan Hossain**
 
 About this web app: **👉🏿 app description here**
 
-Time spent: **👉🏿 X** hours (started 6/6)
+Time spent: **~30 hours (started 6/6)**
 
 ## Required Features
 
@@ -29,11 +29,13 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* ✅ Light and Dark Themes utilizing Pico.css variables, managed with React state.
-* ✅ Form validation with UI feedback to ensure that only valid data is submitted to the database
-* ✅ Responsive Web Design. Because I opted for a fixed Navbar at the top, I used React hook useRef() to calculate the height of the Navbar (which varies due to it's responsivity from Pico.css) in order to offset the rest of the body to be visible directly beneath the Nav. 
-* ✅ Refresh creators every render of homepage to fetch most recent changes. According to the instructions, the initial fetch to View All Content Creators should happen in App.js, which only renders once per refresh. In order to fetch new data in real-time, I have a component slightly further down the component tree refresh the data. 
-* ✅ Used React's ContextAPI to manage the data fetched from Supabase and make it available across the app. This helps foster a cleaner flow of data throughout the component tree structure, and avoids unnecessary rerenders from redundant API calls. 
+* ✅ **Dynamic Light and Dark Themes** utilizing Pico.css variables, managed with React's state management.
+* ✅ **Robust form validation with intuitive UI feedback** to ensure that only valid data is submitted to the database, promoting data integrity and user experience. The form checks whether the user has submitted the required information (name, description, and at least one social media link).
+* ✅ **Responsive Web Design.** My project features a fixed Navbar positioned at the top. To achieve this layout, I utilized React's useRef() hook to dynamically calculate the Navbar's height, which varies based on Pico.css's responsiveness. This calculation allowed me to offset the body content, ensuring it appears directly beneath the Navbar, providing a visually harmonious and user-friendly browsing experience.
+* ✅ **Refresh creators every render of homepage to fetch most recent changes.** The first fetch to View All Content Creators occurs in App.js, which renders only once per refresh. However, to achieve real-time data updates, I positioned a component slightly further down the component tree to handle data refreshes, enabling the continuous fetching of new data and seamless display of up-to-date content to the users.
+* ✅ **Implemented React's ContextAPI to effectively manage the data fetched from Supabase.** Using ContextAPI, I established a streamlined flow of data throughout the component tree structure, promoting a cleaner and more organized data management approach. This intelligent implementation not only facilitates better data accessibility but also mitigates redundant API calls, preventing unnecessary rerenders.
+* ✅ **Loading pages during API calls.** Users are presented with visual feedback, a loading spinner, while waiting for data to be fetched from the API. Additionally, I integrated error pages to gracefully handle scenarios where API requests fail or no data is available.
+* ✅ **Modal to confirm the deletion of a creator.** When a user initiates the deletion action, the Modal dialog appears, prompting them to confirm their decision. 
 
 ## Video Walkthrough
 
