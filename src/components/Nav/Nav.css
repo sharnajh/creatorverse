@@ -1,6 +1,6 @@
 nav {
     margin-bottom: 60px;
-    border-bottom: thin solid var(--muted-border-color);
+
     box-shadow: 0 1px 0 var(--nav-border-color);
     backdrop-filter:  blur(20px);
     -webkit-backdrop-filter:  blur(20px);
