@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router';
 // Page can edit existing creators and add new creators
 
 const CreatorForm = ({ creator, handlePost }) => {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [creatorFormData, setCreatorFormData] = useState(creator);
     const [formErrors, setFormErrors] = useState({});
@@ -44,13 +44,13 @@ const CreatorForm = ({ creator, handlePost }) => {
         const errors = validateData();
         setFormErrors(errors);
 
-        // Send data
+        // Send data and navigate to creator's page
         if (Object.values(errors).every((f) => f === false)) {
-            handlePost(creatorFormData);
-            // navigate("/view/" + creatorFormData.id)
+            handlePost(creatorFormData).then((creator) => {
+                setButtonDisabled(false)
+                navigate("/view/" + creator[0].id)
+            });
         }
-
-        setButtonDisabled(false);
 
     }
     return (

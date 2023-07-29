@@ -10,11 +10,12 @@ const AddCreator = () => {
     }
 
     const addCreator = async (newCreator) => {
-        const { error } = await supabase
+        const { data, error } = await supabase
             .from('creators')
-            .insert(newCreator);
+            .insert(newCreator)
+            .select()
         error && alert(error);
-        // get id of new creator for redirection
+        return data;
     }
 
     return <CreatorForm creator={emptyCreator} handlePost={addCreator} />

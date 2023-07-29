@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../client.js';
 import CreatorForm from '../../components/FormInput/CreatorForm/CreatorForm.jsx';
@@ -12,11 +12,13 @@ const EditCreator = () => {
     const [loading, setLoading] = useState(true);
 
     const editCreator = async (creator) => {
-        const { error } = await supabase
+        const { data, error } = await supabase
             .from('creators')
             .update(creator)
             .eq('id', creatorID)
+            .select()
         error && alert(error);
+        return data;
     }
 
     useEffect(() => {
