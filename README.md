@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 * [x] **Loading pages during API calls.** Users are presented with visual feedback, a loading spinner, while waiting for data to be fetched from the API. Additionally, I integrated error pages to gracefully handle scenarios where API requests fail or no data is available. For example, when the user tries to visit the url "/view/x" where *x* is the ID of a creator that does not exist.
 * [x] **Modal to confirm the deletion of a creator.** When a user initiates the deletion action, the Modal dialog appears, prompting them to confirm their decision. 
 * [x] **[React Icons Library](https://react-icons.github.io/react-icons/) for icon assets.** I leveraged the library to incorporate a wide range of visually appealing and scalable icons. 
-* [ ] **Deployed to Vercel**
+* [x] **[Deployed to Vercel](https://creatorverse-rosy.vercel.app/).** Made react-router work on live deployment with vercel.json. https://creatorverse-rosy.vercel.app/
 
 ## Video Walkthrough
 
