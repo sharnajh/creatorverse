@@ -1,0 +1,47 @@
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 13px;
+}
+
+@media(max-width: 1000px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .info > * {
+        text-align: center;
+    }
+}
+
+
+.info>* {
+    padding: 10px;
+}
+
+.name {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+}
+
+.img > img {
+    border-radius: 5px;
+    width: 100%;
+    border: 6px solid #263745;
+}
+
+.socmed {
+    
+    
+    
+}
+
+.desc {
+    
+}
