@@ -9,7 +9,7 @@ const InputDescription = ({ description, error }) => {
     return (
         <>
             <em style={tipStyle}>{description}</em>
-            {error && <em style={{ ...tipStyle, color: "#B71C1C" }}><BiErrorCircle /> {error}</em>}
+            {error && <em style={{ ...tipStyle, color: "var(--form-element-invalid-border-color)" }}><BiErrorCircle /> {error}</em>}
         </>
     )
 }

@@ -34,7 +34,7 @@ const DeleteCreatorButton = () => {
     }
 
     const style = {
-        backgroundColor: "#B71C1C",
+        backgroundColor: "var(--form-element-invalid-border-color)",
         border: "none"
     }
     return (
