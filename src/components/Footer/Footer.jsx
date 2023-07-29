@@ -8,6 +8,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer">Sharna Hossain</a> for CodePath 
                     · Apache License, Version 2.0
+                    · 2023
             </div>
         </footer>
     )

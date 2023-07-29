@@ -2,7 +2,7 @@
 
 Submitted by: **Sharna Jahan Hossain**
 
-About this web app: **👉🏿 app description here**
+About this web app: **Creatorverse is a web app that allows users to showcase creators they like.  Users can add creators with their names, descriptions, and at least one social media link. Additionally, they have the option to include an optional photo for each creator. Users also have the ability to edit or delete creators as needed. Each creator has a unique link for their profile, and on the main page, all creators are listed together as cards. The app's backend is powered by Supabase, and the frontend styling is done using Picocss.**
 
 Time spent: **~30 hours (started 6/6)**
 
