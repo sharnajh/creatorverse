@@ -33,7 +33,7 @@
 .img > img {
     border-radius: 5px;
     width: 100%;
-    border: 10px solid var(--card-sectionning-background-color);
+    border: 10px solid var(--muted-border-color);
 }
 
 .socmed > span > a {
@@ -42,8 +42,9 @@
 
 .socmed > span > a:hover {
     background-color: var(--primary) !important;
+    color: var(--card-background-color) !important;
 }
 
 .desc {
-    
+    color: var(--contrast)
 }

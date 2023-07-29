@@ -16,6 +16,7 @@ const App = () => {
 
   const [creators, setCreators] = useState();
   const [navHeight, setNavHeight] = useState(0);
+  const [theme, setTheme] = useState("dark");
   const [loading, setLoading] = useState(true);
 
   const fetchCreators = async () => {
@@ -38,10 +39,9 @@ const App = () => {
   }, []);
 
   return (
-    <main>
+    <main data-theme={theme}>
       <span>
-        <Nav ref={NavRef} />
-
+        <Nav ref={NavRef} theme={theme} setTheme={setTheme} />
         {loading ? <FetchingData /> :
           (
             <div id="main" style={{ marginTop: navHeight + 40 }}>

@@ -31,8 +31,9 @@ const SOCMEDDATA = {
 const Button = ({ data, handle }) => {
     console.log(data.icon, handle);
     const style = {
-        backgroundColor: "var(--card-sectionning-background-color)",
+        backgroundColor: "var(--muted-border-color)",
         border: "none",
+        color: "var(--contrast)"
     }
     return (
         <a role="button"

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
-//import logo from "../../assets/logo.svg"
 import './Nav.css';
+import ThemeSwitch from "./ThemeSwitch";
 
 // eslint-disable-next-line react/display-name
 const Nav = forwardRef((props, ref) => {
@@ -9,7 +9,6 @@ const Nav = forwardRef((props, ref) => {
         <nav ref={ref} className="container-fluid">
             <ul>
                 <NavLink to="/">
-                    {/* <li className="logo"><img src={logo} /></li> */}
                     <li><h3>Creatorverse</h3></li>
                 </NavLink>
             </ul>
@@ -20,6 +19,7 @@ const Nav = forwardRef((props, ref) => {
                 <NavLink className="secondary" to="/add">
                     <li>Add a Creator</li>
                 </NavLink>
+                <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
             </ul>
         </nav>
     )
