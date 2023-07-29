@@ -41,7 +41,7 @@ const ViewCreator = () => {
                         <SocialMediaLinks socmeds={creator.socialMediaLinks} />
                     </div>
 
-                    <div className="img">
+                    <div className="img-wrap">
                         <img src={creator.imageURL} alt={`Photo of ${creator.name}`} />
                     </div>
 

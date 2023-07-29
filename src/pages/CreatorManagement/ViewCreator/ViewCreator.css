@@ -26,11 +26,11 @@
     text-align: center;
 }
 
-.img {
+.img-wrap {
     text-align: center;
 }
 
-.img > img {
+.img-wrap > img {
     border-radius: 5px;
     width: 100%;
     border: 10px solid var(--muted-border-color);

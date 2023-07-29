@@ -6,7 +6,8 @@ const Footer = () => {
             <div className="container">
                 Made by <a href="https://www.sharna.dev/"
                     target="_blank"
-                    rel="noopener noreferrer">Sharna Hossain</a> for CodePath
+                    rel="noopener noreferrer">Sharna Hossain</a> for CodePath 
+                    · Apache License, Version 2.0
             </div>
         </footer>
     )

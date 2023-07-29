@@ -28,7 +28,6 @@ const DeleteCreatorButton = () => {
             setModal(false);
             setDisabled(false);
 
-            // Move page
             navigate("/");
         });
     }
