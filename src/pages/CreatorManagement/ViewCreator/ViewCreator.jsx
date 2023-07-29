@@ -21,7 +21,7 @@ const ViewCreator = () => {
                 .from('creators')
                 .select()
                 .eq('id', creatorID)
-            err && console.error(err)
+            err && alert(err)
             setCreator(data[0])
 
             setLoading(false);
