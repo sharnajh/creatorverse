@@ -73,10 +73,6 @@ const CreatorForm = ({ creator, handlePost }) => {
                         description="Provide a link to an image of your creator. Be sure to include the http://"
                     />
                 </div>
-
-                {/* <div className="right">
-                    <DisplayImage imageURL={creatorFormData.imageURL} />
-                </div> */}
             </div>
 
             <SocialMediaInputGroup

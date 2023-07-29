@@ -31,14 +31,14 @@ const SOCMEDDATA = {
 const Button = ({ data, handle }) => {
     console.log(data.icon, handle);
     const style = {
-        marginRight: "10px",
-        backgroundColor: "#263745",
+        backgroundColor: "var(--card-sectionning-background-color)",
         border: "none",
     }
     return (
         <a role="button"
             href={data.url + handle}
             data-tooltip={"@" + handle}
+            className="btn"
             style={style}>
             {data.icon}
         </a>

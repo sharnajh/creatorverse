@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import './CreatorCard.css';
 import { useNavigate } from 'react-router-dom';
+import SocialMediaLinks from '../SocialMediaLinks';
 
 const CreatorCard = ({ creator }) => {
     const navigate = useNavigate();
@@ -11,9 +12,17 @@ const CreatorCard = ({ creator }) => {
     return (
         <article
             onClick={handleNavigate}
-            className="card"
-            style={{ backgroundImage: `url("${creator.imageURL}")` }}>
+            className="card">
+            <div className='overlay'>
+                <h3>{creator.name}</h3>
+                <p>{creator.description}</p>
+                <div className="socmeds">
+                    <SocialMediaLinks socmeds={creator.socialMediaLinks} />
+                </div>
+            </div>
 
+
+            <img className="photo" src={creator.imageURL} />
         </article>
     )
 }

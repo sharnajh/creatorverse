@@ -33,13 +33,15 @@
 .img > img {
     border-radius: 5px;
     width: 100%;
-    border: 6px solid #263745;
+    border: 10px solid var(--card-sectionning-background-color);
 }
 
-.socmed {
-    
-    
-    
+.socmed > span > a {
+    margin-right: 5px;
+}
+
+.socmed > span > a:hover {
+    background-color: var(--primary) !important;
 }
 
 .desc {

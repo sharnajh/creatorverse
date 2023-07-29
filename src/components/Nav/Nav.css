@@ -2,7 +2,7 @@ nav {
     padding: 0 10px;
     margin-bottom: 60px;
     /* background-color: #0F181F; */
-    border-bottom: thin solid #252E35;
+    border-bottom: thin solid var(--card-sectionning-background-color);
     backdrop-filter:  blur(20px);
     -webkit-backdrop-filter:  blur(20px);
     z-index: 99;
