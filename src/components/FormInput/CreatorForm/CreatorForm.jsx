@@ -51,7 +51,7 @@ const CreatorForm = ({ creator, handlePost }) => {
                 navigate("/view/" + creator[0].id)
             });
         }
-
+        setButtonDisabled(false);
     }
     return (
         <form className="container" onSubmit={handleSubmit}>

@@ -45,10 +45,7 @@ const App = () => {
           <div id="main" style={{ marginTop: navHeight + 40 }}>
             <CreatorsContext.Provider value={creators}>
               <CreatorsContextRefresh.Provider value={fetchCreators}>
-
-                {/* <Routes creators={creators} /> */}
                 <Routes />
-
               </CreatorsContextRefresh.Provider>
             </CreatorsContext.Provider>
           </div >
