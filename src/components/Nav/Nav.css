@@ -10,8 +10,12 @@ nav {
     right: 0;
     left: 0;
     transition: 0.15s ease-in-out;
-
+    z-index: 999999;
     background-color: var(--nav-background-color);
+}
+
+nav:hover {
+    background-color: var(--background-color);
 }
 
 a {
