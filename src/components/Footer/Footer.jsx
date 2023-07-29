@@ -4,7 +4,9 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                Made by Sharna Hossain for CodePath
+                Made by <a href="https://www.sharna.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer">Sharna Hossain</a> for CodePath
             </div>
         </footer>
     )
