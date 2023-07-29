@@ -15,6 +15,7 @@ const App = () => {
   const NavRef = useRef();
 
   const [creators, setCreators] = useState();
+
   const [navHeight, setNavHeight] = useState(0);
   const [theme, setTheme] = useState("dark");
   const [loading, setLoading] = useState(true);

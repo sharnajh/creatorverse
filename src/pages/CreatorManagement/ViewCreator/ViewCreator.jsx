@@ -7,6 +7,7 @@ import DeleteCreatorButton from '../../../components/DeleteCreatorButton.jsx';
 import NoCreators from '../../ErrorViews/NoCreators.jsx';
 import FetchingData from '../../ErrorViews/FetchingData.jsx';
 import SocialMediaLinks from '../../../components/SocialMediaLinks';
+import defaultPic from '../../../assets/default.png';
 
 const ViewCreator = () => {
     const { creatorID } = useParams();
@@ -42,7 +43,7 @@ const ViewCreator = () => {
                     </div>
 
                     <div className="img-wrap">
-                        <img src={creator.imageURL} alt={`Photo of ${creator.name}`} />
+                        <img src={creator.imageURL || defaultPic} alt={`Photo of ${creator.name}`} />
                     </div>
 
                     <div className="desc">

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import './CreatorCard.css';
 import { useNavigate } from 'react-router-dom';
 import SocialMediaLinks from '../SocialMediaLinks';
+import defaultPic from '../../assets/default.png';
 
 const CreatorCard = ({ creator }) => {
     const navigate = useNavigate();
@@ -24,7 +25,7 @@ const CreatorCard = ({ creator }) => {
 
             <img className="photo"
                 alt={`Photo of ${creator.name}`}
-                src={creator.imageURL} />
+                src={creator.imageURL || defaultPic} />
         </article>
     )
 }
