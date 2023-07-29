@@ -56,7 +56,13 @@ GIF created with [ScreenToGif](https://www.screentogif.com/)
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+One of the more demanding aspects of the project was building a React form from scratch without leveraging any library like react-forms. It ended up being great practice in handling state management and optimizing component flow. I recognized that breaking down complex components into smaller, more manageable ones not only improved the overall structure of the project but also facilitated easier maintenance.
+
+For awhile, I had been using frontend libraries to help me build UI. Opting for a simpler yet efficient solution like Picocss enabled me to approach the project with a more creative mindset and revisit the fundamentals.
+
+One of the main learning points for me was practicing CSS grids, which proved to be essential for designing the app's layout and responsiveness.
+
+
 
 ## License
 
