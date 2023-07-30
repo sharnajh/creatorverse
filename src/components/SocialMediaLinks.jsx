@@ -38,6 +38,8 @@ const Button = ({ data, handle }) => {
     return (
         <a role="button"
             href={data.url + handle}
+            target="_blank"
+            rel="noreferrer noopener"
             data-tooltip={"@" + handle}
             className="btn"
             style={style}>
