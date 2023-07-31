@@ -28,7 +28,7 @@ The following **optional** features are implemented:
 - [x] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
-
+* [x] **[Deployed to Vercel](https://creatorverse-rosy.vercel.app/).** Made react-router work on live deployment with vercel.json. https://creatorverse-rosy.vercel.app/
 * [x] **Dynamic Light and Dark Themes** utilizing Pico.css variables, managed with React's state management.
 ![Gif of dynamic theme toggle](src/assets/gifs/themes.gif)
 * [x] **Form validation with intuitive UI feedback** to ensure that only valid data is submitted to the database, promoting data integrity and user experience. The form checks whether the user has submitted the required information (name, description, and at least one social media link), provides feedback with error syntax and highlighting, and won't allow submission until valid inputs are entered.
@@ -38,7 +38,6 @@ The following **additional** features are implemented:
 * [x] **Loading pages during API calls.** Users are presented with visual feedback, a loading spinner, while waiting for data to be fetched from the API. Additionally, I integrated error pages to gracefully handle scenarios where API requests fail or no data is available. For example, when the user tries to visit the url "/view/x" where *x* is the ID of a creator that does not exist.
 * [x] **Modal to confirm the deletion of a creator.** When a user initiates the deletion action, the Modal dialog appears, prompting them to confirm their decision. 
 * [x] **[React Icons Library](https://react-icons.github.io/react-icons/) for icon assets.** I leveraged the library to incorporate a wide range of visually appealing and scalable icons. 
-* [x] **[Deployed to Vercel](https://creatorverse-rosy.vercel.app/).** Made react-router work on live deployment with vercel.json. https://creatorverse-rosy.vercel.app/
 
 ## Video Walkthrough
 
