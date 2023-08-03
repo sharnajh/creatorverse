@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useLayoutEffect, createContext } from 'react';
 import '@picocss/pico';
-import './App.css';
+import './assets/styles/App.css';
 import { supabase } from './client.js';
 import Routes from './Routes.jsx';
 import Nav from './components/Nav/Nav.jsx';
